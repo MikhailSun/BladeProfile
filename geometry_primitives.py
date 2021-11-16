@@ -57,8 +57,10 @@ class Line:
         y1 = self.get_coordinates(x1)
         y2 = self.get_coordinates(x2)
         if offset>0:
+            # return np.array([x1]), np.array([y1])
             return x1, y1
         else:
+            # return np.array([x2]), np.array([y2])
             return x2, y2
 
 
@@ -71,6 +73,8 @@ class Circle:
     def get_coordinates(self,fi):
         x=self.X0+self.R*np.cos(fi)
         y = self.Y0 + self.R * np.sin(fi)
+        # return np.array([x]), np.array([y])
+        # return float(x), float(y)
         return x,y
 
     def find_nearest_fi_by_coordinates(self,x,y):
