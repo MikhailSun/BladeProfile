@@ -1,3 +1,6 @@
+#TODO! сделать расчет максимального прогиба профиля по заданному параметру
+#TODO! сделать расчет горла
+
 import geometry_primitives as gp
 import numpy as np
 import makecharts as mc

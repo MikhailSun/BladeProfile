@@ -17,7 +17,7 @@ import geometry_primitives as gp
 
 
 # углы входа и выхода для разных сечений
-betta1 = [np.deg2rad(40),np.deg2rad(30),np.deg2rad(20)]
+betta1 = [np.deg2rad(65),np.deg2rad(30),np.deg2rad(20)]
 betta2 = [np.deg2rad(60),np.deg2rad(50),np.deg2rad(45)]
 # длина хорды
 chord = [20,15,12]
@@ -33,6 +33,8 @@ y_thikness = np.array([0.01, 0.01025, 0.0105, 0.0139, 0.0159, 0.0177, 0.0185, 0.
 profiles=[]
 coordinates_of_profiles=[]
 for b1, b2, ch, ga in zip(betta1, betta2, chord, gamma):
+
+
     profile=blade.profile(b1, b2, ch, ga)
     profile.set_thikness(x_thikness, ch*y_thikness)
     profiles.append(profile)
